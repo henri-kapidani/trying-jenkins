@@ -36,6 +36,12 @@ pipeline {
       }
     }
 
+    stage('Push') {
+      steps {
+        sh 'docker build -f curriculum-front/Dockerfile . -t asdf/asdfsadfsdf:latest'
+      }
+    }
+
   }
   environment {
     DOCKERHUB_USER = 'ASDF'
